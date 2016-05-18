@@ -4,6 +4,7 @@
 #include "addform.h"
 #include "showform.h"
 #include "aboutform.h"
+#include "webform.h"
 
 #include <QKeyEvent>
 
@@ -45,8 +46,8 @@ void MainWindow::aboutButton_clicked()
 }
 void MainWindow::videoButton_clicked()
 {
-//       WebForm *w = new WebForm();
-//       w->show();
+       WebForm *w = new WebForm();
+       w->show();
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *event)

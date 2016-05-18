@@ -4,9 +4,11 @@ INPUT(
 ./release\showform.o
 ./release\addform.o
 ./release\aboutform.o
+./release\webform.o
 ./release\qrc_resuorce.o
 ./release\moc_mainwindow.o
 ./release\moc_showform.o
 ./release\moc_addform.o
 ./release\moc_aboutform.o
+./release\moc_webform.o
 );

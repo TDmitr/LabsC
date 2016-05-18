@@ -6,6 +6,8 @@
 #include <QKeyEvent>
 #include <QtSql/QSql>
 #include <QtSql/QSqlDatabase>
+#include <QDebug>
+#include <QSqlTableModel>
 
 
 ShowForm::ShowForm(QWidget *parent) :
@@ -23,8 +25,8 @@ ShowForm::ShowForm(QWidget *parent) :
         model->setHorizontalHeaderItem(3,new QStandardItem(QString("Age")));
         model->setHorizontalHeaderItem(4,new QStandardItem(QString("Group")));
 
-       // QStandardItem *firstRow1 = new QStandardItem(QString("1st"));
-       // model->setItem(0,0,firstRow1);
+        QStandardItem *firstRow1 = new QStandardItem(QString("1st"));
+        model->setItem(0,0,firstRow1);
 
 
         ui->tableModel->setModel(model);
@@ -62,4 +64,40 @@ void ShowForm::keyPressEvent(QKeyEvent *event)
        add->show();
    }
 
+}
+bool ShowForm::createConnection(){
+//    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+//    db.setHostName("localhost");
+//    db.setDatabaseName("studentdb");
+//    db.setUserName("root");
+//    db.setPassword("");
+//    if (!db.open()) {
+//        //qDebug() << "Database error occurred";
+//        return false;
+//    }
+    return true;
+}
+
+void ShowForm::LoadTable()
+{
+    model = new QSqlTableModel(0, database);
+    model->setTable("students");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("idstudents"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("name"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("surname"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("age"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("group"));
+    model->select();
+    ui->tableModel->setModel(model);
+}
+
+void ShowForm::Add(QString Name, QString Surname, int age, QString group)
+{
+    int rowCount = model->rowCount();
+    model->insertRow(rowCount);
+    model->setData(model->index(rowCount, 1), Name);
+    model->setData(model->index(rowCount, 2), Surname);
+    model->setData(model->index(rowCount, 3), age);
+    model->setData(model->index(rowCount, 4), group);
+    model->submitAll();
 }
