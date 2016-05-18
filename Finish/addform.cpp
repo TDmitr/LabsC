@@ -1,5 +1,8 @@
 #include "addform.h"
+#include "aboutform.h"
+#include "showform.h"
 #include "ui_addform.h"
+#include <QKeyEvent>
 
 AddForm::AddForm(QWidget *parent) :
     QWidget(parent),
@@ -12,3 +15,4 @@ AddForm::~AddForm()
 {
     delete ui;
 }
+

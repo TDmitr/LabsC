@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>313</height>
+    <height>384</height>
    </rect>
   </property>
   <property name="palette">
@@ -182,7 +182,7 @@ background-color: rgb(85, 200, 43)</string>
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>220</y>
+      <y>280</y>
       <width>230</width>
       <height>50</height>
      </rect>
@@ -222,6 +222,29 @@ background-color: rgb(85, 200, 43)</string>
     </property>
     <property name="text">
      <string>About</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="VideoBtn">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>220</y>
+      <width>230</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei Light</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(85, 200, 43)</string>
+    </property>
+    <property name="text">
+     <string>Watch Video</string>
     </property>
    </widget>
   </widget>

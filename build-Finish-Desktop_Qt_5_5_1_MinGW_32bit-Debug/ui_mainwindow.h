@@ -31,6 +31,7 @@ public:
     QPushButton *AddButton;
     QPushButton *ExitButton;
     QPushButton *AboutButton;
+    QPushButton *VideoBtn;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -39,7 +40,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(400, 313);
+        MainWindow->resize(400, 384);
         QPalette palette;
         QBrush brush(QColor(130, 217, 76, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -81,7 +82,7 @@ public:
 "background-color: rgb(85, 200, 43)"));
         ExitButton = new QPushButton(centralWidget);
         ExitButton->setObjectName(QStringLiteral("ExitButton"));
-        ExitButton->setGeometry(QRect(80, 220, 230, 50));
+        ExitButton->setGeometry(QRect(80, 280, 230, 50));
         ExitButton->setFont(font);
         ExitButton->setStyleSheet(QLatin1String("\n"
 "background-color: rgb(85, 200, 43)"));
@@ -90,6 +91,12 @@ public:
         AboutButton->setGeometry(QRect(80, 160, 230, 50));
         AboutButton->setFont(font);
         AboutButton->setStyleSheet(QLatin1String("\n"
+"background-color: rgb(85, 200, 43)"));
+        VideoBtn = new QPushButton(centralWidget);
+        VideoBtn->setObjectName(QStringLiteral("VideoBtn"));
+        VideoBtn->setGeometry(QRect(80, 220, 230, 50));
+        VideoBtn->setFont(font);
+        VideoBtn->setStyleSheet(QLatin1String("\n"
 "background-color: rgb(85, 200, 43)"));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
@@ -115,6 +122,7 @@ public:
         AddButton->setText(QApplication::translate("MainWindow", "New Student", 0));
         ExitButton->setText(QApplication::translate("MainWindow", "Exit", 0));
         AboutButton->setText(QApplication::translate("MainWindow", "About", 0));
+        VideoBtn->setText(QApplication::translate("MainWindow", "Watch Video", 0));
     } // retranslateUi
 
 };

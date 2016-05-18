@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\showform.o
+./debug\addform.o
+./debug\aboutform.o
+./debug\qrc_resuorce.o
+./debug\moc_mainwindow.o
+./debug\moc_showform.o
+./debug\moc_addform.o
+./debug\moc_aboutform.o
+);

@@ -194,8 +194,10 @@ Makefile: ../Finish/Finish.pro D:/Qt/5.5/mingw492_32/mkspecs/win32-g++/qmake.con
 		D:/Qt/5.5/mingw492_32/mkspecs/features/lex.prf \
 		../Finish/Finish.pro \
 		D:/Qt/5.5/mingw492_32/lib/qtmaind.prl \
+		D:/Qt/5.5/mingw492_32/lib/Qt5WebKit.prl \
 		D:/Qt/5.5/mingw492_32/lib/Qt5Widgets.prl \
 		D:/Qt/5.5/mingw492_32/lib/Qt5Gui.prl \
+		D:/Qt/5.5/mingw492_32/lib/Qt5Network.prl \
 		D:/Qt/5.5/mingw492_32/lib/Qt5Core.prl
 	$(QMAKE) -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" -o Makefile ..\Finish\Finish.pro
 D:/Qt/5.5/mingw492_32/mkspecs/features/spec_pre.prf:
@@ -333,8 +335,10 @@ D:/Qt/5.5/mingw492_32/mkspecs/features/yacc.prf:
 D:/Qt/5.5/mingw492_32/mkspecs/features/lex.prf:
 ../Finish/Finish.pro:
 D:/Qt/5.5/mingw492_32/lib/qtmaind.prl:
+D:/Qt/5.5/mingw492_32/lib/Qt5WebKit.prl:
 D:/Qt/5.5/mingw492_32/lib/Qt5Widgets.prl:
 D:/Qt/5.5/mingw492_32/lib/Qt5Gui.prl:
+D:/Qt/5.5/mingw492_32/lib/Qt5Network.prl:
 D:/Qt/5.5/mingw492_32/lib/Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug" -o Makefile ..\Finish\Finish.pro

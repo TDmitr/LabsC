@@ -1,5 +1,6 @@
 #ifndef SHOWFORM_H
 #define SHOWFORM_H
+#include <QStandardItemModel>
 
 #include <QWidget>
 
@@ -17,6 +18,9 @@ public:
 
 private:
     Ui::ShowForm *ui;
+    QStandardItemModel *_model;
+protected:
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // SHOWFORM_H

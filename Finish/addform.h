@@ -17,6 +17,7 @@ public:
 
 private:
     Ui::AddForm *ui;
+
 };
 
 #endif // ADDFORM_H
